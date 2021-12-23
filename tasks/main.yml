@@ -5,6 +5,7 @@
       - unzip
       - gpg
       - dirmngr
+      - file
     state: present
     update_cache: true
 
