@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: ansible-role-log4shell
+  role_name: ansible_role_log4shell
   author: lucab85
   description:
     Ansible playbook to verify target Linux hosts using the official Red Hat
