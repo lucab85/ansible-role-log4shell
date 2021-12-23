@@ -33,8 +33,8 @@
 
 - name: gpg verify detector
   ansible.builtin.command: >
-    'gpg --verify {{ detector_dir }}{{ sh_signature }}
-    {{ detector_dir }}{{ sh_detector }}'
+    "gpg --verify {{ detector_dir }}{{ sh_signature }}
+    {{ detector_dir }}{{ sh_detector }}"
   when: verify_gpg
   tags:
     - molecule-idempotence-notest
