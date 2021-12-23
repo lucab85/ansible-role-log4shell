@@ -25,12 +25,16 @@
 - name: gpg public key
   ansible.builtin.command: '{{ gpg_public_key }}'
   when: verify_gpg
+  tags:
+    - molecule-idempotence-notest
 
 - name: gpg verify detector
   ansible.builtin.command: >
     'gpg --verify {{ detector_dir }}{{ sh_signature }}
     {{ detector_dir }}{{ sh_detector }}'
   when: verify_gpg
+  tags:
+    - molecule-idempotence-notest
 
 - name: remove any detector run directory
   ansible.builtin.file:
@@ -48,6 +52,8 @@
   ansible.builtin.command: >
     '{{ detector_dir }}{{ sh_detector }} {{ detector_options }}
     --tmp {{ detector_dir }}{{ detector_run_dir }}'
+  tags:
+    - molecule-idempotence-notest
 
 - name: files in detector run directory
   ansible.builtin.find:
