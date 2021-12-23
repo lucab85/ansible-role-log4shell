@@ -4,5 +4,4 @@ exclude_paths:
   - .github/
 skip_list:
   - 'no-handler'
-  - 'role-name'
   - 'no-changed-when'
