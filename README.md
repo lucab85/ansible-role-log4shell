@@ -1,5 +1,8 @@
-ansible-role-log4shell
+lucab85.ansible_role_log4shell
 =========
+
+[![CI](https://github.com/lucab85/ansible-role-log4shell/actions/workflows/ci.yml/badge.svg)](https://github.com/lucab85/ansible-role-log4shell/actions/workflows/ci.yml)
+[![Release](https://github.com/lucab85/ansible-role-log4shell/actions/workflows/release.yml/badge.svg)](https://github.com/lucab85/ansible-role-log4shell/actions/workflows/release.yml)
 
 Ansible playbook to verify target Linux hosts using the official Red Hat Log4j detector script RHSB-2021-009 for Log4Shell (CVE-2021-44228).
 
@@ -35,6 +38,14 @@ Dependencies
 
 None.
 
+Download
+------------
+
+```bash
+ansible-galaxy install lucab85.ansible_role_log4shell
+
+```
+
 Example Playbook
 ----------------
 
@@ -42,7 +53,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: lucab85.ansible-role-log4shell }
+         - { role: lucab85.ansible_role_log4shell }
 
 License
 -------

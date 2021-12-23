@@ -1,7 +1,9 @@
 ---
-- name: dependency present
+- name: dependency presents
   ansible.builtin.package:
-    name: unzip
+    name:
+      - unzip
+      - gpg
     state: present
     update_cache: true
 
