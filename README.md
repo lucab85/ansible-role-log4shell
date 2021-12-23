@@ -58,6 +58,8 @@ None.
 Download
 ------------
 
+Code also available in Ansible Galaxy role [lucab85.ansible_role_log4shell](https://galaxy.ansible.com/lucab85/ansible_role_log4shell)
+
 ```bash
 ansible-galaxy install lucab85.ansible_role_log4shell
 

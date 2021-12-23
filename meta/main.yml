@@ -4,7 +4,8 @@ galaxy_info:
   author: lucab85
   description:
     Ansible playbook to verify target Linux hosts using the official Red Hat
-    Log4j detector script RHSB-2021-009 for Log4Shell (CVE-2021-44228).
+    Log4j detector script RHSB-2021-009 version 1.2 2021-12-20 for Log4Shell
+    (CVE-2021-44228).
   company: Luca Berton
   license: "license (BSD, MIT)"
   min_ansible_version: 2.9
