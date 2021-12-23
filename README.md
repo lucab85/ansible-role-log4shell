@@ -32,11 +32,23 @@ detector_dir: "/tmp/cve-2021-44228/"
 detector_run_dir: 'tmp'
 detector_options: '-n -d --no-progress --scan {{ detector_path }}'
 gpg_keyid: '7514F77D8366B0D9'
-gpg_public_key: 'gpg --keyserver pgp.mit.edu --recv {{ gpg_keyid }}'
 clean_run_before: true
-delete_after: false
+delete_after: true
 verify_gpg: true
 ```
+
+- sh_detector: the filename of the detector bash script file
+- sh_signature: the filename of the detector GPG signature file
+- detector_baseurl: the base URL to download the previous files
+- detector_path: the path to inspect (default `/var/`)
+- detector_dir: the download path of the detector (default `detector_dir`)
+- detector_run_dir: the subdirectory to create before the run (default `tmp`)
+- detector_options: the command lines options for detector script (default `-n -d --no-progress --scan {{ detector_path }}`)
+- gpg_keyid: the GPG public key to download for the verification (default Red Hat Product Security `7514F77D8366B0D9`)
+- clean_run_before: remove the run directory and recreate before the execution - detector requires empty directory (default `true`)
+- delete_after: remove the _detector_dir_ the execution (default `true`)
+- verify_gpg: perform the GPG signature donwload and verification (default: `true`)
+
 
 Dependencies
 ------------
