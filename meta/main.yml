@@ -22,14 +22,32 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: opensuse
+      versions:
+        - all
+    - name: GenericLinux
+      versions:
+        - all
+    - name: Amazon
+      versions:
+        - all
+    - name: ArchLinux
+      versions:
+        - all
+    - name: Alpine
+      versions:
+        - all
 
   galaxy_tags:
     - log4j
     - log4shell
     - cve202144228
+    - security
+    - system
     - detector
     - scanner
     - redhat
     - debian
     - ubuntu
     - fedora
+    - opensuse

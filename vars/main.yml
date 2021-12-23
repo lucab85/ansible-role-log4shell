@@ -1,0 +1,4 @@
+---
+gpg_keyid: '7514F77D8366B0D9'
+gpg_public_key: 'gpg --keyserver pgp.mit.edu --recv {{ gpg_keyid }}'
+gpg_verify: 'gpg --verify {{ detector_dir }}{{ sh_signature }} {{ detector_dir }}{{ sh_detector }}'
