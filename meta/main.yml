@@ -7,7 +7,7 @@ galaxy_info:
     Log4j detector script RHSB-2021-009 for Log4Shell (CVE-2021-44228).
   company: Luca Berton
   license: "license (BSD, MIT)"
-  min_ansible_version: 2.7
+  min_ansible_version: 2.9
   platforms:
     - name: EL
       versions:

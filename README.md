@@ -8,6 +8,11 @@ Ansible playbook to verify target Linux hosts using the official Red Hat Log4j d
 
 [Red Hat version 1.2 detector 2021-12-20](https://access.redhat.com/security/vulnerabilities/RHSB-2021-009).
 
+Ansible Playbook
+------------
+
+Code also available as Ansible Playbook [lucab85/log4j-cve-2021-44228](https://github.com/lucab85/log4j-cve-2021-44228)
+
 Requirements
 ------------
 
