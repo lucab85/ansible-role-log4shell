@@ -9,6 +9,7 @@
   ansible.builtin.file:
     path: '{{ detector_dir }}'
     state: directory
+    mode: '0644'
 
 - name: download detector file(s)
   ansible.builtin.get_url:
@@ -22,28 +23,29 @@
     - '{{ sh_signature }}'
 
 - name: gpg public key
-  ansible.builtin.shell: '{{ gpg_public_key }}'
-  when: verify_gpg == true
+  ansible.builtin.command: '{{ gpg_public_key }}'
+  when: verify_gpg
 
 - name: gpg verify detector
-  ansible.builtin.shell: >
+  ansible.builtin.command: >
     'gpg --verify {{ detector_dir }}{{ sh_signature }}
     {{ detector_dir }}{{ sh_detector }}'
-  when: verify_gpg == true
+  when: verify_gpg
 
 - name: remove any detector run directory
   ansible.builtin.file:
     path: '{{ detector_dir }}{{ detector_run_dir }}'
     state: absent
-  when: clean_run_before == true
+  when: clean_run_before
 
 - name: create detector run directory
   ansible.builtin.file:
     path: '{{ detector_dir }}{{ detector_run_dir }}'
     state: directory
+    mode: '0644'
 
 - name: run detector/scanner
-  ansible.builtin.shell: >
+  ansible.builtin.command: >
     '{{ detector_dir }}{{ sh_detector }} {{ detector_options }}
     --tmp {{ detector_dir }}{{ detector_run_dir }}'
 
@@ -60,4 +62,4 @@
   ansible.builtin.file:
     path: '{{ detector_dir }}'
     state: absent
-  when: delete_after == true
+  when: delete_after

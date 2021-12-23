@@ -24,7 +24,7 @@ galaxy_info:
   galaxy_tags:
     - log4j
     - log4shell
-    - cve-2021-44228
+    - cve202144228
     - detector
     - scanner
     - redhat
