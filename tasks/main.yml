@@ -1,4 +1,8 @@
 ---
+- name: print information
+  ansible.builtin.debug:
+    msg: '{{ intro }}'
+
 - name: dependency presents
   ansible.builtin.package:
     name:

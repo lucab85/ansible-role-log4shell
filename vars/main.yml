@@ -1,5 +1,14 @@
 ---
-gpg_public_key: 'gpg --keyserver pgp.mit.edu --recv {{ gpg_keyid }}'
+rh_bullettin: >-
+  https://access.redhat.com/security/vulnerabilities/RHSB-2021-009
+intro: |
+  Ansible Playbook tested with detector version 1.2 released 2021-12-20.
+  If a 404 error occur please adjust the URL with the latest version available
+  for detector URL.
+  Please refer to the Red Hat Security Bullettin for up-to-date information and
+  adjust the playbook variables accordingly.
+  {{ rh_bullettin }}.
+gpg_public_key: 'gpg --keyserver {{ gpg_server[0] }} --recv {{ gpg_keyid }}'
 gpg_verify: >-
   gpg --verify {{ detector_dir }}{{ sh_signature }}
   {{ detector_dir }}{{ sh_detector }}

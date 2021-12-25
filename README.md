@@ -28,7 +28,7 @@ sh_detector: "cve-2021-44228--2021-12-20-1836.sh"
 sh_signature: 'cve-2021-44228--2021-12-20-1836.sh.asc'
 detector_baseurl: 'https://access.redhat.com/sites/default/files/'
 detector_path: "/var/"
-detector_dir: "/tmp/cve-2021-44228/"
+detector_dir: "/opt/cve-2021-44228/"
 detector_run_dir: 'tmp'
 detector_options: '-n -d --no-progress --scan {{ detector_path }}'
 gpg_keyid: '7514F77D8366B0D9'
@@ -42,7 +42,7 @@ verify_gpg: true
 - detector_baseurl: the base URL to download the previous files
 - detector_path: the path to inspect (default `/var/`)
 - detector_dir: the download path of the detector (default `detector_dir`)
-- detector_run_dir: the subdirectory to create before the run (default `tmp`)
+- detector_run_dir: the subdirectory to create before the run (default `opt`)
 - detector_options: the command lines options for detector script (default `-n -d --no-progress --scan {{ detector_path }}`)
 - gpg_keyid: the GPG public key to download for the verification (default Red Hat Product Security `7514F77D8366B0D9`)
 - clean_run_before: remove the run directory and recreate before the execution - detector requires empty directory (default `true`)
