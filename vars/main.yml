@@ -8,7 +8,7 @@ intro: |
   Please refer to the Red Hat Security Bullettin for up-to-date information and
   adjust the playbook variables accordingly.
   {{ rh_bullettin }}.
-gpg_public_key: 'gpg --keyserver {{ gpg_server[0] }} --recv {{ gpg_keyid }}'
+gpg_public_key: 'gpg --keyserver {{ gpg_server }} --recv {{ gpg_keyid }}'
 gpg_verify: >-
   gpg --verify {{ detector_dir }}{{ sh_signature }}
   {{ detector_dir }}{{ sh_detector }}
