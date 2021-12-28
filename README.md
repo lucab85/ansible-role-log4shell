@@ -70,9 +70,16 @@ Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
-      roles:
-         - { role: lucab85.ansible_role_log4shell }
+```yaml
+---
+- name: run detector
+  hosts: all
+  become: true
+  roles:
+    - role: lucab85.ansible_role_log4shell
+      detector_path: "/var/www"
+
+```
 
 License
 -------
