@@ -11,4 +11,4 @@ gpg_keyid: '7514F77D8366B0D9'
 gpg_server: "pgp.mit.edu"
 clean_run_before: true
 delete_after: true
-verify_gpg: true
+verify_gpg: false
