@@ -24,8 +24,8 @@ Role Variables
 The default variable values - `defaults/main.yml`:
 
 ```yaml
-sh_detector: "cve-2021-44228--2021-12-20-1836.sh"
-sh_signature: 'cve-2021-44228--2021-12-20-1836.sh.asc'
+sh_detector: "cve-2021-44228--2022-01-10-1242.sh"
+sh_signature: 'cve-2021-44228--2022-01-10-1242.sh.asc'
 detector_baseurl: 'https://access.redhat.com/sites/default/files/'
 detector_path: "/var/"
 detector_dir: "/opt/cve-2021-44228/"
