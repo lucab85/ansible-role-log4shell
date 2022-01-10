@@ -6,7 +6,7 @@ lucab85.ansible_role_log4shell
 
 Ansible role to scan target Linux hosts using the official Red Hat Log4j detector script RHSB-2021-009 for Log4Shell (CVE-2021-44228).
 
-Tested with [Red Hat version 1.2 detector 2021-12-20](https://access.redhat.com/security/vulnerabilities/RHSB-2021-009).
+Tested with [Red Hat version 1.3 detector 2022-01-10](https://access.redhat.com/security/vulnerabilities/RHSB-2021-009).
 
 Ansible Playbook
 ------------
